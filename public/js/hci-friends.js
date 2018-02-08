@@ -10,14 +10,22 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+
+	// name listener
+	$("a.name").click(function(e){
+		e.preventDefault();
+		//console.log($(this).text());
+		$(this).text(anagrammedName($(this).text()));
+	});
 }
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
-	
+  // preventDefault();
+
 	if (name == "Doug Engelbart") {
 		return "Notable Grudge";
-	} 
+	}
 	else if (name == "Ivan Sutherland") {
 		return "Vandal Heist Run";
 	}
